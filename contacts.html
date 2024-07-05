@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SkyQuerry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* CSS styles for the Contact Us page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #004d66;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        
+        main {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            text-align: center;
+            margin-right: 20px;
+        }
+        
+        .info-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .info-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .info-card i {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #004d66;
+        }
+
+        .info-card i:hover {
+            color: #2906f2;
+        }
+        
+        footer {
+            background-color: #004d66;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed; /* Changed from absolute to fixed */
+            bottom: 0;
+            left: 0; /* Span the full width */
+            right: 0; /* Span the full width */
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+        
+        .back-to-home a {
+            color: #004d66;
+            text-decoration: none;
+        }
+      
+        .back-to-home a:hover {
+            color: #2906f2;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .contact-form h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .contact-form button {
+            background-color: #004d66;
+            color: #fff;
+        }
+        
+        .contact-form button:hover {
+            background-color: #2906f2;
+        }
+        
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #004d66;">
+    <div class="container">
+        <a class="navbar-brand" href="#"><i class="fas fa-home"></i> SkyQuerry</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html"><i class="fas fa-box"></i> Products</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <h1>Contact Us</h1>
+</header>
+
+<main>
+    <div class="back-to-home">
+        <a href="index.html">Back to Homepage</a>
+    </div>
+    
+    <section class="contact-info">
+        <div class="info-card">
+            <a href="https://www.google.com/maps/place/Lessesia,+Taveta" target="_blank">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Visit Us</h3>
+                <p>Visit us at our location in Lessesia, Taveta.</p>
+            </a>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Us</h3>
+            <p><a href="mailto:info@skyquerryinvestments.com">info@skyquerryinvestments.com</a></p>
+        </div>
+        <div class="info-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Call Us</h3>
+            <p><a href="tel:+2547706496180">+2547706496180</a></p>
+            <p>Or</p>
+            <p><a href="tel:+2547729810410">+2547729810410</a></p>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <h3>Contact Form</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 SkyQuerry. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
