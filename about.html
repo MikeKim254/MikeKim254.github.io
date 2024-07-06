@@ -157,6 +157,53 @@
 
 
 
+
+.card-equal-height {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .card-title {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+      }
+      
+      .card ul, .card p {
+        margin-bottom: 0;
+      }
+      
+      .img-fluid {
+        max-height: 150px;
+        object-fit: cover;
+      }
+      
+      .card-equal-height img {
+        margin-top: 1em;
+      }
+      
+      @media (max-width: 767px) {
+        .card-equal-height {
+          height: auto;
+        }
+      }
+      
+
+
+
+
+
+        
+
+
+
     </style>
 </head>
 <body>
@@ -202,52 +249,65 @@
 <div class="parallax"></div>
 
 <!-- About Section -->
-<div id="about" class="container text-center">
-  <h2 data-aos="fade-up">Who is Sky Quarry Investment?</h2>
-
-
-  <p data-aos="fade-up">Sky Quarry Investment is a growing brick manufacturing company which was founded in November 2015 but was officially incorporated in May 2020 and has its operations based in Taita Taveta</p>
-
-
-  <p data-aos="fade-up">SkyQuerry is your ultimate guide to understanding the Earth's rocky landscape. We provide comprehensive information on various types of rocks, minerals, and geological formations.</p>
-  <p data-aos="fade-up">Whether you're a seasoned geologist or just starting to explore the world of rocks, SkyQuerry has something for everyone. Join us on this exciting journey through time and discover the hidden treasures beneath our feet.</p>
-
-  <h4 data-aos="fade-up">Our Values</h4>
-  <ul data-aos="fade-up">
-   <li>Solid as stone and committed.</li> 
-    <li>Supply of high quality and affordable stones.</li>
-    <li>Doing the right thing ethically.</li>
-    <li>Care for environment and nature.</li>
-  </ul>
-
-  <h4 data-aos="fade-up">Our Culture</h4>
-  <p data-aos="fade-up">To maintain our experience of advising all customers on quality stones suitable for their construction needs.<br>
-     To continuously engage in good customer service and beyond.<br>
-     To actively encourage all our customers to participate in the review processes and ways of sourcing for quality and affordable stones.
-  </p>
-
-  <h4 data-aos="fade-up">Mission</h4>
-  <p data-aos="fade-up">To maintain and grow our position as the leading suppliers of quality construction stones in the region and act as a leader in providing affordable quality stones.</p>
-  
-  <h4 data-aos="fade-up">Vision</h4>
-  <p data-aos="fade-up">To be a profitable, customer-driven producer of quality stones with engaged employees, operating safely and effectively while conserving our environment.</p>
-  
-  <h4 data-aos="fade-up">Our History</h4>
-  <p data-aos="fade-up">At SkyQuerry Investment, we are proud to be a modern-day supplier of high-quality and affordable stones since 2015. Working on a natural stone quarry, we cut and source a variety of foundation and wall stones that suit our customers' construction needs.</p>
-  
-  <img src="img/History.jpg" alt="about" class="History-img" data-aos="fade-up">
- 
-
-
-
-
-
-
-
-
-
-
-
+ <div class="container text-center">
+    <h2 data-aos="fade-up">Who is Sky Quarry Investment?</h2>
+    <p data-aos="fade-up">Sky Quarry Investment is a growing brick manufacturing company which was founded in November 2015 but was officially incorporated in May 2020 and has its operations based in Taita Taveta.SkyQuerry is your ultimate guide to understanding the Earth's rocky landscape. We provide comprehensive information on various types of rocks, minerals, and geological formations.
+      Whether you're a seasoned geologist or just starting to explore the world of rocks, SkyQuerry has something for everyone. Join us on this exciting journey through time and discover the hidden treasures beneath our feet.
+    </p>
+   
+    <div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-4">
+      <div class="card mb-4 card-equal-height" data-aos="fade-up">
+        <div class="card-body text-center">
+          <h4 class="card-title">Our Values</h4>
+          <ul>
+            <li>Solid as stone and committed.</li>
+            <li>Supply of high-quality and affordable stones.</li>
+            <li>Doing the right thing ethically.</li>
+            <li>Care for environment and nature.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card mb-4 card-equal-height" data-aos="fade-up">
+        <div class="card-body text-center">
+          <h4 class="card-title">Our Culture</h4>
+          <p>To maintain our experience of advising all customers on quality stones suitable for their construction needs.<br>
+             To continuously engage in good customer service and beyond.<br>
+             To actively encourage all our customers to participate in the review processes and ways of sourcing for quality and affordable stones.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card mb-4 card-equal-height" data-aos="fade-up">
+        <div class="card-body text-center">
+          <h4 class="card-title">Mission</h4>
+          <p>To maintain and grow our position as the leading suppliers of quality construction stones in the region and act as a leader in providing affordable quality stones.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card mb-4 card-equal-height" data-aos="fade-up">
+        <div class="card-body text-center">
+          <h4 class="card-title">Vision</h4>
+          <p>To be a profitable, customer-driven producer of quality stones with engaged employees, operating safely and effectively while conserving our environment.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card mb-4 card-equal-height" data-aos="fade-up">
+        <div class="card-body text-center">
+          <h4 class="card-title">Our History</h4>
+          <p>At SkyQuerry Investment, we are proud to be a modern-day supplier of high-quality and affordable stones since 2015. Working on a natural stone quarry, we cut and source a variety of foundation and wall stones that suit our customers' construction needs.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
