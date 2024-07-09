@@ -204,5 +204,26 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+
+
+
+
+
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var currentPath = window.location.pathname;
+      var navLinks = document.querySelectorAll('.nav-item');
+
+      navLinks.forEach(function(navLink) {
+          var linkPath = navLink.querySelector('a').getAttribute('href');
+          if (currentPath.includes(linkPath)) {
+              navLink.classList.add('active');
+          }
+      });
+  });
+</script>
+
+
 </body>
 </html>
