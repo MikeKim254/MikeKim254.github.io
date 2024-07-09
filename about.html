@@ -464,6 +464,19 @@
 
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var currentPath = window.location.pathname;
+      var navLinks = document.querySelectorAll('.nav-item');
+
+      navLinks.forEach(function(navLink) {
+          var linkPath = navLink.querySelector('a').getAttribute('href');
+          if (currentPath.includes(linkPath)) {
+              navLink.classList.add('active');
+          }
+      });
+  });
+</script>
 
 
 
