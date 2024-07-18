@@ -15,6 +15,9 @@
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             background-color: #f8f9fa; /* Light gray background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .navbar {
@@ -79,10 +82,22 @@
             height: 100%;
         }
 
+        .footer {
+            background-color: #004d66; /* Dark blue */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+    
+        .footer p {
+            margin-bottom: 0;
+        }
+
         .copyright {
             background-color: #004d66; /* Dark blue background */
             color: #fff; /* White text */
-            padding: 20px 0; /* Padding for top and bottom */
+            padding: 0px 0; /* Padding for top and bottom */
             text-align: center; /* Center the text */
             font-size: 17px; /* Adjust the size as needed */
             font-weight: thin;
@@ -111,8 +126,8 @@
             font-size: 1rem;
             margin-bottom: 0.5rem;
         }
-        
-       .btn-primary {
+
+        .btn-primary {
             background-color: #ff6600; /* Change to your brand's primary color */
             border-color: #ff6600;
             transition: background-color 0.1s ease, border-color 0.1s ease; /* Faster transition */
@@ -122,67 +137,59 @@
             background-color: #e65c00; /* Darker shade for hover */
             border-color: #e65c00;
         }
+        
+        /* Custom CSS */
+        .jumbotron {
+            background: url('docs/productimg.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 200px; /* Adjusted padding for better mobile view */
+            margin-bottom: 70px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
 
-       
-       
-         /* Custom CSS */
+        .jumbotron .container {
+            max-width: 600px; /* Limit the max width for better readability on larger screens */
+            margin: 0 auto; /* Center the container */
+        }
 
-   
-    .jumbotron {
-    background: url('docs/productimg.jpg') no-repeat center center;
-    background-size: cover;
-    color: #fff;
-    padding: 200px 20px; /* Adjusted padding for better mobile view */
-    margin-bottom: 70px;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-}
+        .jumbotron::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            z-index: -1;
+        }
 
-.jumbotron-fluid {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
+        /* Add responsive styling for smaller screens */
+        @media (max-width: 767.98px) {
+            .jumbotron {
+                padding: 50px 20px; /* Reduce padding for mobile view */
+            }
 
-.jumbotron .container {
-    max-width: 600px; /* Limit the max width for better readability on larger screens */
-    margin: 0 auto; /* Center the container */
-}
+            .jumbotron h1, .jumbotron p {
+                font-size: 1.5rem; /* Adjust font size for better readability on mobile */
+            }
+        }
 
-.jumbotron::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    z-index: -1;
-}
-
-/* Add responsive styling for smaller screens */
-@media (max-width: 576px) {
-    .jumbotron h1 {
-        font-size: 1.5rem;
-    }
-    .jumbotron p {
-        font-size: 1rem;
-    }
-}
-
-
-        /* Add more styles as needed */
-
+        .content-wrap {
+            flex: 1;
+        }
 
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#"><i class="fas fa-home"></i> Sky Quarry</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#"><i class="fas fa-home"></i> Sky Quarry</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
@@ -209,152 +216,123 @@
     </div>
 </nav>
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container text-center">
-        <h1 class="custom-font">Explore Our Products</h1>
-        <p class="custom-font">Discover high-quality construction materials tailored to your needs.</p>
+<div class="content-wrap">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1 class="custom-font">Explore Our Products</h1>
+            <p class="custom-font">Discover high-quality construction materials tailored to your needs.</p>
+        </div>
     </div>
-</div>
 
-   
-   
+    <div class="container">
+        <!-- Machine Cut Stones Section -->
+        <div class="section-title">
+            <h2>Machine Cut Stones</h2>
+            <p>Discover our durable machine-cut stones, perfect for creating sturdy walls and foundations. Available in different sizes to suit your project requirements.</p>
+        </div>
+        <div class="row">
+            <!-- Machine Cut Stone 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="docs/Machinecut1.jpg" class="card-img-top" alt="Machine Cut Stone 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Wall Stone</h5>
+                        <p class="card-text">Size: 9 by 6</p>
+                        <p class="card-text">Price: 40 Ksh per Piece</p>
+                        <a href="mailto:info@gmail.com" class="btn btn-primary">Email Us</a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Machine Cut Stone 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="docs/Machinecut2.jpg" class="card-img-top" alt="Machine Cut Stone 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Foundation Stone</h5>
+                        <p class="card-text">Size: 9 by 9</p>
+                        <p class="card-text">Price: 45 Ksh per Piece</p>
+                        <a href="mailto:info@gmail.com" class="btn btn-primary">Email Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine Cut Stone 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="docs/Machinecut3.jpg" class="card-img-top" alt="Machine Cut Stone 3">
+                    <div class="card-body">
+                        <h5 class="card-title">wall Stone</h5>
+                        <p class="card-text">Size: 9 by 5</p>
+                        <p class="card-text">Price: 40 Ksh per Piece</p>
+                        <a href="mailto:info@gmail.com" class="btn btn-primary">Email Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manual Cut Stones Section -->
+        <div class="section-title">
+            <h2>Manual Cut Stones</h2>
+            <p>Explore our expertly hand-chiseled stones, offering a unique and rustic look for your construction projects. Choose from a variety of sizes and textures.</p>
+        </div>
+        <div class="row">
+            <!-- Manual Cut Stone 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="docs/Manualcut1.jpg" class="card-img-top" alt="Manual Cut Stone 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Manual Dressed Stone</h5>
+                        <p class="card-text">Size: 9 by 4</p>
+                        <p class="card-text">Price: 15 Ksh per feets</p>
+                        <a href="mailto:info@gmail.com" class="btn btn-primary">Email Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manual Cut Stone 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="docs/Manualcut2.jpg" class="card-img-top" alt="Manual Cut Stone 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Manual dressed Stone</h5>
+                        <p class="card-text">Size: 9 by 6</p>
+                        <p class="card-text">Price: 19 Ksh per feets</p>
+                        <a href="mailto:info@gmail.com" class="btn btn-primary">Email Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manual Cut Stone 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="docs/Manualcut3.jpg" class="card-img-top" alt="Manual Cut Stone 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Manual Dressed Stone</h5>
+                        <p class="card-text">Size: 9 by 5</p>
+                        <p class="card-text">Price: 19 Ksh per feets</p>
+                        <a href="mailto:info@gmail.com" class="btn btn-primary">Email Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
         <div class="container">
-    <!-- Machine Cut Stones Section -->
-    <div class="section-title">
-        <h2>Machine Cut Stones</h2>
-        <p>Discover our durable machine-cut stones, perfect for creating sturdy walls and foundations. Available in different sizes to suit your project requirements.</p>
-    </div>
-    <div class="row">
-        <!-- Machine Cut Stone 1 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow-sm">
-                <img src="docs/Machinecut1.jpg" class="card-img-top" alt="Machine Cut Stone 1">
-                <div class="card-body">
-                    <h5 class="card-title">Wall Stone</h5>
-                    <p class="card-text">Size: 9 by 6</p>
-                    <p class="card-text">Price: 40 Ksh per Piece</p>
-                    <a href="mailto:skyquarry65@gmail.com" class="btn btn-primary">Email Us</a>
-                </div>
+            <p>Follow us on:</p>
+            <div>
+                <a href="https://www.facebook.com/" class="text-white mr-2"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://www.twitter.com/" class="text-white mr-2"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.instagram.com/" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
         </div>
-
-        <!-- Machine Cut Stone 2 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow-sm">
-                <img src="docs/machinecut2.jpg" class="card-img-top" alt="Machine Cut Stone 2">
-                <div class="card-body">
-                    <h5 class="card-title">Wall Stone</h5>
-                    <p class="card-text">Size: 9 by 5</p>
-                    <p class="card-text">Price: 40 Ksh per Piece</p>
-                    <a href="mailto:skyquarry65@gmail.com" class="btn btn-primary">Email Us</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Machine Cut Stone 3 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow-sm">
-                <img src="docs/product9.jpg" class="card-img-top" alt="Machine Cut Stone 3">
-                <div class="card-body">
-                    <h5 class="card-title">Wall Stone</h5>
-                    <p class="card-text">Size: 9 by 9 </p>
-                    <p class="card-text">Price: 45 Ksh per Piece</p>
-                    <a href="mailto:skyquarry65@gmail.com" class="btn btn-primary">Email Us</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Manual Cut Stones Section -->
-    <div class="section-title">
-        <h2>Manual Cut Stones</h2>
-        <p>Explore our manual cut stones, renowned for their classic appeal and durability. Ideal for both structural foundations and decorative purposes.</p>
-    </div>
-    <div class="row">
-        <!-- Manual Cut Stone 1 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow-sm">
-                <img src="docs/ManualCut1.jpg" class="card-img-top" alt="Manual Cut Stone 1">
-                <div class="card-body">
-                    <h5 class="card-title">Wall Stone</h5>
-                    <p class="card-text">Size: 9 by 4</p>
-                    <p class="card-text">Price: 15 Ksh per feets</p>
-                 <a href="mailto:skyquarry65@gmail.com" class="btn btn-primary">Email Us</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Manual Cut Stone 2 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow-sm">
-                <img src="docs/ManualCut2.jpg" class="card-img-top" alt="Manual Cut Stone 2">
-                <div class="card-body">
-                    <h5 class="card-title">Wall Stone</h5>
-                    <p class="card-text">Size: 9 by 6</p>
-                    <p class="card-text">Price: 19 Ksh per feets</p>
-                    <a href="mailto:skyquarry65@gmail.com" class="btn btn-primary">Email Us</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Manual Cut Stone 3 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow-sm">
-                <img src="docs/ManualCut3.jpg" class="card-img-top" alt="Manual Cut Stone 3">
-                <div class="card-body">
-                    <h5 class="card-title">Wall Stone</h5>
-                    <p class="card-text">Size: 9 by 5</p>
-                    <p class="card-text">Price: 19 Ksh per feets</p>
-                    <a href="mailto:skyquarry65@gmail.com" class="btn btn-primary">Email Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </footer>
 </div>
 
-
-
-
-
-
-
-             <!-- Manual Cut Stone 3 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow-sm">
-                <img src="docs/stoneE.jpg" class="card-img-top" alt="Manual Cut Stone 3">
-                <div class="card-body">
-                    <h5 class="card-title">Wall Stone</h5>
-                    <p class="card-text">Size: 9 by 9</p>
-                    <p class="card-text">Price: 25 Ksh per feet</p>
-                    <a href="mailto:skyquarry65@gmail.com" class="btn btn-primary">Email Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Product Video Section -->
-<div class="section-title">
-    <h2 class="text-center">Product Video</h2>
-</div>
-<div class="container text-center">
-    <div class="video-container">
-        <video controls muted>
-            <source src="videos/Video4.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
-
-
-
-
-
-
-<!-- Footer Section -->
 <div class="copyright">
     <div class="container">
-        <p>&copy; 2024 SkyQuerry. All rights reserved.</p>
+        <p>&copy; 2023 SkyQuerry. All rights reserved.</p>
     </div>
 </div>
 
@@ -362,27 +340,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
-
-
-
-
-
-
-            <script>
-  document.addEventListener("DOMContentLoaded", function() {
-      var currentPath = window.location.pathname;
-      var navLinks = document.querySelectorAll('.nav-item');
-
-      navLinks.forEach(function(navLink) {
-          var linkPath = navLink.querySelector('a').getAttribute('href');
-          if (currentPath.includes(linkPath)) {
-              navLink.classList.add('active');
-          }
-      });
-  });
-</script>
-
-
 </body>
 </html>
+
